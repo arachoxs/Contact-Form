@@ -1,0 +1,143 @@
+/*initial config*/
+
+:root{
+    --ligth-green: hsl(148, 38%, 91%);
+    --green:hsl(169, 82%, 27%);
+    --red:hsl(0, 66%, 54%);
+    --ligth-grey:hsl(186, 15%, 59%);
+    --grey:hsl(187, 24%, 22%);
+}
+
+body *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--ligth-green);
+    font-family:karla, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:var(--grey);
+    align-content: center;
+}  
+
+/*principal container*/
+
+main{
+    max-width: 50%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/*form*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*subsecciones del form*/
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.form-group input , .radio-group{
+    border-radius: 5px;
+    border: 1px solid var(--ligth-grey);
+    height: 40px;
+}
+
+.row-group , .radio-group{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.radio-group{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.pair{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pair div{
+    flex: 1;
+}
+
+textarea{
+    border-radius: 5px;
+    border: 1px solid var(--ligth-grey);
+}
+
+button[type*="submit"]{
+    background-color: var(--green);
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    
+}
+
+/*efects*/
+
+input:hover , .radio-group:hover ,textarea:hover {
+    border-color: var(--green);
+    cursor: pointer;
+}
+
+.radio-group:has(input[type="radio"]:checked){
+    background-color: var(--ligth-green);
+    border-color: var(--green);
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+input[type="radio"]:checked{
+    background-image: url('./assets/images/icon-radio-selected.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
