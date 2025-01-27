@@ -26,23 +26,36 @@ body{
 
 @media (max-width: 400px) {
     main{
-        width: 20% !important;
+        width: 90% !important;
         min-width: 300px !important;
-        margin: 20px auto;
     }
 
-    .pair{
+    .pair {
         display: flex;
         flex-direction: column !important;
         flex-wrap: wrap;
         gap: 20px;
     }
+
+    .row-group .pair{
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+    }
+
+    #radios{
+        flex-direction: column;
+    }
+
+    #succes-message{
+        width: 70% !important;
+    }
+
 }
 
 /*principal container*/
 
 main{
-    max-width: 50%;
+    width: 50%;
     min-width: 400px;
     background-color: white;
     padding: 30px;
@@ -61,7 +74,7 @@ form{
     gap: 20px;
 }
 
-label{
+label, p{
     font-size: 14px;
     font-weight: 400;
 }
@@ -93,7 +106,21 @@ label{
     padding: 20px;
 }
 
+.row-group {
+    display: flex;
+    flex-direction: column;
+    
+}
 
+#radioPair{
+    display: flex;
+    flex-direction: column;
+}
+
+#radios{
+    display: flex;
+    gap: 20px;
+}
 
 .pair{
     display: flex;
@@ -127,13 +154,42 @@ input{
     padding-left: 10px;
 }
 
-.row-group{
-    flex-wrap: wrap;
+#succes-message{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--grey);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    gap: 10px;
 }
 
+#succes-message img{
+    width: 20px;
+    height: 21px;
+}
+
+#succes-message div{
+    display: flex;
+    gap: 10px;
+}
+
+#succes-message #message{
+    color: var(--ligth-green);
+    font-size: 12px;
+}
+
+.required-caracter{
+    color: var(--green);
+}
 /*efects*/
 
-input:hover , .radio-group:hover ,textarea:hover {
+input:hover , .radio-group:hover ,textarea:hover ,button{
     border-color: var(--green);
     cursor: pointer;
 }
@@ -146,7 +202,7 @@ input:hover , .radio-group:hover ,textarea:hover {
 input[type="radio"] {
     appearance: none;
     width: 15px;
-    height: 15px;
+    height: 14px;
     border-radius: 50%;
     border: 1px solid #ccc;
     background-color: #fff;
@@ -158,25 +214,17 @@ input[type="radio"]:checked{
     background-position: center;
 }
 
+
 /*Error message*/
 
 .errorMessage{
     font-size: 14px;
     color:var(--red);
-    flex-basis: 100%;
 }
 
 .red-border input, 
 .red-border textarea {
     border-color: red;
 }
-
-
-
-
-
-
-
-
 
 

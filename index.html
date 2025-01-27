@@ -31,48 +31,60 @@
     <form id="mainForm" novalidate>
       <div class="pair">
         <div class="form-group">
-          <label for="first-name">First Name</label>
+          <label for="first-name">First Name <span class="required-caracter">*</span></label>
           <input type="text" id="first-name" name="first-name" required >
         </div>
 
         <div class="form-group">
-          <label for="last-name">Last Name</label>
+          <label for="last-name">Last Name <span class="required-caracter">*</span></label>
           <input type="text" id="last-name" name="last-name" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="user-email">Email Address</label>
+        <label for="user-email">Email Address <span class="required-caracter">*</span></label>
         <input type="email" id="user-email" name="user-email" required>
       </div>
 
       <fieldset style="border: none;">
-        <legend style="margin-bottom: 15px;">Query Type</legend>
+        <legend style="margin-bottom: 15px;">Query Type <span class="required-caracter">*</span></legend>
         <div class="pair" id="radioPair">
-          <div class="radio-group" >
-            <input type="radio" name="query" id="general-enquiry" required>
-            <label for="general-enquiry">General Enquiry</label>
-          </div>
-
-          <div class="radio-group">
-            <input type="radio" name="query" id="support-request" required>
-            <label for="support-request">Support Request</label>
+          <div id="radios">
+            <div class="radio-group" >
+              <input type="radio" name="query" id="general-enquiry" required>
+              <label for="general-enquiry">General Enquiry <span class="required-caracter">*</span></label>
+            </div>
+  
+            <div class="radio-group">
+              <input type="radio" name="query" id="support-request" required>
+              <label for="support-request">Support Request <span class="required-caracter">*</span></label>
+            </div>
           </div>
         </div>
       </fieldset>
 
       <div class="form-group">
-        <label for="user-message">Message</label>
-        <textarea id="user-message" name="message" rows="8" style="resize: none;" required></textarea>
+        <label for="user-message">Message <span class="required-caracter">*</span></label>
+        <textarea id="user-message" name="message" rows="6" style="resize: none;" required></textarea>
       </div>
 
       <div class="row-group">
-        <input type="checkbox" id="cbox_consent" value="consent" required/>
-        <label for="cbox_consent">I consent to being contacted by the team</label>
+        <div class="pair">
+          <input type="checkbox" id="cbox_consent" value="consent" required/>
+          <label for="cbox_consent">I consent to being contacted by the team</label>
+        </div>
       </div>
 
       <div class="form-group">
         <button type="submit">Submit</button>
+      </div>
+
+      <div id="succes-message">
+        <div>
+          <img src="assets/images/icon-success-check.svg">
+          <p>Message Sent!</p>
+        </div>
+        <p id="message">Thanks for completing the form. We'll be in touch soon!</p>
       </div>
 
     </form>
@@ -81,16 +93,6 @@
 
 
 
-  <!--
-    I consent to being contacted by the team
-    To submit this form, please consent to being contacted
-
-    Submit
-
-    Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
-  -->
-  
   <!--
     <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 

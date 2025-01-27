@@ -1,11 +1,14 @@
 //obtencion de los elementos del dom
 const form = document.getElementById("mainForm");
+const succesMessage = document.getElementById("succes-message");
+
 const textMessage = "This Field is required";
 const emailMessage = "Please enter a valid email addres";
 const radioMessage = "please select a query type";
 const checkboxMessage = "To submit this form, please consent to being contacted";
-let validForm
+let validForm;
 
+succesMessage.style.display="none";
 
 function messageAdder(div,message){
     validForm=false;
@@ -49,6 +52,14 @@ form.addEventListener("submit", (event) => {
                 div.classList.remove("red-border"); 
             }
         }
+    }
+
+    if(validForm){
+        succesMessage.style.display="flex";
+
+        setTimeout(function() {
+            location.reload(); // Recarga la página
+        }, 5000); // 5000 milisegundos = 5 segundos
     }
 
     
