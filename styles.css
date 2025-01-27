@@ -26,6 +26,7 @@ body{
 
 main{
     max-width: 50%;
+    min-width: 400px;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -44,7 +45,7 @@ form{
 }
 
 label{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -75,6 +76,7 @@ label{
     padding: 20px;
 }
 
+
 .pair{
     display: flex;
     flex-direction: row;
@@ -101,6 +103,14 @@ button[type*="submit"]{
     letter-spacing: 2px;
     margin-top: 10px;
     
+}
+
+input{
+    padding-left: 10px;
+}
+
+.row-group{
+    flex-wrap: wrap;
 }
 
 /*efects*/
@@ -130,6 +140,13 @@ input[type="radio"]:checked{
     background-position: center;
 }
 
+/*Error message*/
+
+.errorMessage{
+    font-size: 14px;
+    color:var(--red);
+    flex-basis: 100%;
+}
 
 
 

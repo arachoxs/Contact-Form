@@ -28,7 +28,7 @@
   <main>
     <h1>Contact Us</h1>
 
-    <form>
+    <form id="mainForm" novalidate>
       <div class="pair">
         <div class="form-group">
           <label for="first-name">First Name</label>
@@ -48,14 +48,14 @@
 
       <fieldset style="border: none;">
         <legend style="margin-bottom: 15px;">Query Type</legend>
-        <div class="pair">
+        <div class="pair" id="radioPair">
           <div class="radio-group" >
-            <input type="radio" name="query" id="general-enquiry">
+            <input type="radio" name="query" id="general-enquiry" required>
             <label for="general-enquiry">General Enquiry</label>
           </div>
 
           <div class="radio-group">
-            <input type="radio" name="query" id="support-request">
+            <input type="radio" name="query" id="support-request" required>
             <label for="support-request">Support Request</label>
           </div>
         </div>
@@ -63,7 +63,7 @@
 
       <div class="form-group">
         <label for="user-message">Message</label>
-        <textarea id="user-message" name="message" rows="8" style="resize: none;"></textarea>
+        <textarea id="user-message" name="message" rows="8" style="resize: none;" required></textarea>
       </div>
 
       <div class="row-group">
