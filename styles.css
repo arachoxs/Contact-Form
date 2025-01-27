@@ -15,18 +15,35 @@ body *{
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--ligth-green);
     font-family:karla, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:var(--grey);
     align-content: center;
 }  
 
+/*responsive media*/
+
+@media (max-width: 400px) {
+    main{
+        width: 20% !important;
+        min-width: 300px !important;
+        margin: 20px auto;
+    }
+
+    .pair{
+        display: flex;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
 /*principal container*/
 
 main{
     max-width: 50%;
-    min-width: 320px;
+    min-width: 400px;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -75,6 +92,7 @@ label{
     align-items: center;
     padding: 20px;
 }
+
 
 
 .pair{
@@ -148,6 +166,10 @@ input[type="radio"]:checked{
     flex-basis: 100%;
 }
 
+.red-border input, 
+.red-border textarea {
+    border-color: red;
+}
 
 
 
